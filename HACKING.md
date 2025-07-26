@@ -35,6 +35,9 @@ If disk space becomes low, clean build artifacts:
 ```
 # Clean build artifacts
 just clean
+
+# Clean up previous images
+podman image prune
 ```
 
 ### Virtual Machine Images
