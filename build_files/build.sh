@@ -23,6 +23,10 @@ dnf5 -y install swayosd
 # other related packages found in main Fedora repos:
 dnf5 -y install mako swaybg
 
+# Additional development tools, notably GNOME/GTK headers.
+dnf5 group install -y --with-optional c-development
+dnf5 group install -y --with-optional gnome-software-development
+
 # TODO: build walker from source.
 
 # dnf5 -y install package
