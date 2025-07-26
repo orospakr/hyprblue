@@ -8,3 +8,8 @@ It maintains the normal Bluefin GNOME desktop as the default, but Hyprland (with
 
 It is suitable for deploying directly yourself onto your own machine as a platform for doing your own custom hyprland setup on top of a Bluefin base, or for basing new images on with opinionated hyprland desktop setups.
 
+## Deployment (aka Install)
+
+On an existing Bluefin install:
+
+    $ sudo bootc switch ghcr.io/orospakr/hyprblue
