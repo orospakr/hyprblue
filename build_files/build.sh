@@ -41,7 +41,7 @@ dnf5 install -y gtk4-layer-shell vips
 cd /tmp
 git clone https://github.com/abenz1267/walker.git
 cd walker/cmd
-GOCACHE=/tmp/go-cache go build -x -o walker
+GOCACHE=/tmp/go-cache GOPATH=/tmp/go-path GOMODCACHE=/tmp/go-mod-cache go build -x -o walker
 install -m 755 walker /usr/bin/walker
 cd /
 rm -rf /tmp/walker
