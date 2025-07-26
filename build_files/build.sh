@@ -31,7 +31,20 @@ dnf5 group install -y --with-optional gnome-software-development
 # --noautoremove because some good extra tools are included thanks to gnome-builder
 dnf5 remove -y --noautoremove gnome-builder
 
-# TODO: build walker from source.
+# Install Go compiler and Walker build dependencies
+dnf5 install -y golang gtk4-layer-shell-devel vips-devel gobject-introspection-devel
+
+# Install Walker runtime dependencies
+dnf5 install -y gtk4-layer-shell vips
+
+# Build Walker from source
+cd /tmp
+git clone https://github.com/abenz1267/walker.git
+cd walker/cmd
+go build -x -o walker
+install -m 755 walker /usr/bin/walker
+cd /
+rm -rf /tmp/walker
 
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
