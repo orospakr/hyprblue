@@ -27,6 +27,10 @@ dnf5 -y install mako swaybg
 dnf5 group install -y --with-optional c-development
 dnf5 group install -y --with-optional gnome-software-development
 
+# gnome-software-development adds the gnome-builder app IDE, but gnome-builder should still be used from Flatpak, so back it out
+# --noautoremove because some good extra tools are included thanks to gnome-builder
+dnf5 remove -y --noautoremove gnome-builder
+
 # TODO: build walker from source.
 
 # dnf5 -y install package
