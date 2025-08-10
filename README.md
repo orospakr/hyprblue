@@ -2,7 +2,7 @@
 
 ![logo](hyprblue.png)
 
-[![Build Status](https://github.com/orospakr/hyprblue/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/orospakr/hyprblue/actions/workflows/build.yml)
+[![Build Status](https://github.com/orospakr/hyprblue/actions/workflows/build.yml/badge.svg?branch=hyprblue)](https://github.com/orospakr/hyprblue/actions/workflows/build.yml)
 [![GHCR](https://ghcr-badge.egpl.dev/orospakr/hyprblue/latest_tag?trim=major&label=latest&ignore=sha256-*)](https://github.com/orospakr/hyprblue/pkgs/container/hyprblue)
 
 An unopinionated Universal Blue image of Bluefin DX that includes the Hyprland and friends packages, such as the various hypr* packages, waybar, walker, and various other related sundries.
