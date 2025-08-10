@@ -2,6 +2,9 @@
 
 ![logo](hyprblue.png)
 
+[![Build Status](https://github.com/orospakr/hyprblue/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/orospakr/hyprblue/actions/workflows/build.yml)
+[![GHCR](https://ghcr-badge.egpl.dev/orospakr/hyprblue/latest_tag?trim=major&label=latest)](https://github.com/orospakr/hyprblue/pkgs/container/hyprblue)
+
 An unopinionated Universal Blue image of Bluefin DX that includes the Hyprland and friends packages, such as the various hypr* packages, waybar, walker, and various other related sundries.
 
 It maintains the normal Bluefin GNOME desktop as the default, but Hyprland (with completely stock config) is available as a session in GDM.
@@ -43,5 +46,8 @@ Hyprblue is built on the shoulders of many excellent projects and maintainers:
 ### Build Infrastructure
 - **[bootc](https://github.com/bootc-dev/bootc)** - Bootable container technology
 - **[bootc-image-builder](https://github.com/osbuild/bootc-image-builder)** - VM image creation from container images
+
+### Badge Services
+- **[ghcr-badge](https://github.com/eggplants/ghcr-badge)** - GitHub Container Registry status badge service by [@eggplants](https://github.com/eggplants)
 
 Thank you to all the maintainers and contributors of these projects for making Hyprblue possible!
