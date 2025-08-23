@@ -2,6 +2,8 @@
 
 set -ouex pipefail
 
+WALKER_RELEASE="https://github.com/abenz1267/walker/archive/refs/tags/v0.13.26.tar.gz"
+
 ### Install packages
 
 # Packages can be installed from any enabled yum repo on the image.
@@ -39,12 +41,13 @@ dnf5 install -y gtk4-layer-shell vips
 
 # Build Walker from source
 cd /tmp
-git clone https://github.com/abenz1267/walker.git
-cd walker/cmd
+wget ${WALKER_RELEASE}
+tar -xzf *.tar.gz
+cd walker-*/cmd
 GOCACHE=/tmp/go-cache GOPATH=/tmp/go-path GOMODCACHE=/tmp/go-mod-cache go build -x -o walker
 install -m 755 walker /usr/bin/walker
 cd /
-rm -rf /tmp/walker
+rm -rf /tmp/walker-* /tmp/*.tar.gz
 
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
